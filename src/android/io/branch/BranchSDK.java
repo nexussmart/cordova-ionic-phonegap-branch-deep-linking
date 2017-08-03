@@ -1007,11 +1007,12 @@ public class BranchSDK extends CordovaPlugin {
 
             if (error == null) {
 
+                //TO DELETE
+                String parts[] = url.split(".");
+                url += parts[0] + ".test-" + parts[1] + "." + parts[2];
+                //TO DELETE
+
                 try {
-                    //TO DELETE
-                    String parts[] = url.split(".");
-                    url += parts[0] + ".test-" + parts[1] + "." + parts[2];
-                    //TO DELETE
                     response.put("url", url);
                 } catch (JSONException e) {
                     e.printStackTrace();
